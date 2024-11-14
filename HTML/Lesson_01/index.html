@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Umer Tariq" />
+    <meta name="description" content="HTML tutorial" />
+    <link rel="icon" href="../resources/html5.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <title>My first web page</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>My plans for the year</h1>
+
+      <nav aria-labelledby="Primary-Nav">
+        <h2 id="Primary-Nav">Primary-Navigation</h2>
+        <ul>
+          <li><a href="#learning">Self learning</a></li>
+          <li><a href="#travel">Travel Plans</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <main>
+      <article id="learning">
+        <h2>I'm Ready to Learn HTML</h2>
+
+        <section>
+          <h3>My beginnig</h3>
+          <p>This is my first web page</p>
+
+          <figure>
+            <img
+              src="img/html_logo_300x300.png"
+              alt="HTML Logo"
+              width="300"
+              height="300"
+            />
+            <p><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></p>
+            <figcaption>HTML Logo</figcaption>
+          </figure>
+        </section>
+        <section>
+          <h3>My Daily schedule</h3>
+          <table>
+            <caption>
+              My daily schedule
+            </caption>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th scope="col">Time</th>
+                <th scope="col">Activity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Morning</th>
+                <td>
+                  <time datetime="08:00">8 am</time> -
+                  <time datetime="11:00">11 am</time>
+                </td>
+                <td>Code</td>
+              </tr>
+              <tr>
+                <th scope="row">Noon</th>
+                <td>
+                  <time datetime="11:00">11 am</time> -
+                  <time datetime="12:00">12 pm</time>
+                </td>
+                <td>Lunch</td>
+              </tr>
+              <tr>
+                <th scope="row">Evening</th>
+                <td>
+                  <time datetime="12:00">12 pm</time> -
+                  <time datetime="05:00">5 pm</time>
+                </td>
+                <td>Learn</td>
+              </tr>
+              <tr>
+                <th scope="row">Night</th>
+                <td rowspan="2">
+                  <time datetime="05:00">5 pm</time> -
+                  <time datetime="05:00">5 am</time>
+                </td>
+                <td rowspan="2">Enjoy</td>
+              </tr>
+              <tr>
+                <th scope="row">Sleep</th>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+              <td colspan="3">Happy Coding</td>
+            </tr>
+            </tfoot>
+          </table>
+          <p>Let me tell you how:</p>
+          <ol>
+            <li>I learn more about web dev.</li>
+            <li>I plan out my schedule.</li>
+            <li>
+              I use resources from
+              <abbr title="Mozrila Developer Network"
+                ><a href="https://developer.mozilla.org/" target="_blank"
+                  >MDN</a
+                ></abbr
+              >
+            </li>
+          </ol>
+        </section>
+      </article>
+
+      <hr />
+
+      <article id="travel">
+        <h2>I Am Also Planning a Vacation</h2>
+        <p>I've been working hard and <em>really need a getaway</em></p>
+        <p>
+          I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach
+        </p>
+        <section>
+          <h3>Places I's like to visit</h3>
+          <ul>
+            <li>
+              <p>I've heard good things about the caribbean</p>
+              <img
+                src="img/caribbean.jpg"
+                alt="caribbean"
+                loading="lazy"
+                title="Photo"
+              />
+            </li>
+
+            <li>
+              <p>I've heard good things about going here:</p>
+              <figure>
+                <img
+                  src="img/vacation.jpg"
+                  alt="vacation mode"
+                  title="Vacation"
+                />
+                <figcaption>
+                  <address>
+                    Kashmir
+                    <br />
+                    Azad Kashmir
+                    <br />
+                    Pakistan
+                  </address>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+          <aside>
+            <details>
+              <summary>Where Do you suggest I go?</summary>
+              <p>
+                I want to spend <time datetime="PT3H"> 24 </time>Hours in that
+                place
+              </p>
+            </details>
+          </aside>
+        </section>
+        <section>
+          <h3>Places I want to avoid</h3>
+          <dl>
+            <dt>North Pole</dt>
+            <dd>I hear this is cold</dd>
+
+            <dt>South Pole</dt>
+            <dd>I hear this is cold</dd>
+
+            <dt>Mountain tops</dt>
+            <dd>I hear this is cold</dd>
+          </dl>
+        </section>
+      </article>
+
+      <article id="contact">
+        <h2>Get in contact with me</h2>
+        <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+          <legend>Personal details</legend>
+          <p>
+            <label for="firstname">First name</label>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              required
+              autocomplete="on"
+              autofocus
+              placeholder="First Name"
+            />
+          </p>
+          <p>
+            <label for="lastname">Last Name</label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="Last Name"
+              required
+              autocomplete="on"
+            />
+          </p>
+          <p>
+            <label for="phone">Phone number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              autocomplete="on"
+              pattern="[0-9]{10}"
+              inputmode="numeric"
+              placeholder="Please enter 10 digits"
+            />
+          </p>
+          <p>
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="on"
+              required
+              placeholder="example@gmail.com"
+            />
+          </p>
+          <p>
+            <label for="sport">Select your fav sport</label>
+            <select name="sport" id="sport" multiple  required>
+              <optgroup label="Groud sports">
+                <option value="Cricket">Cricket</option>
+                <option value="Football">Football</option>
+              </optgroup>
+              <optgroup label="table sports">
+                <option value="table tennis">Table Tennis</option>
+              </optgroup>
+              <option value="other">Other</option>
+            </select>
+          </p>
+          <p>
+            <label for="favDish">What is your favourite Dish?</label>
+            <input type="text" name="favDish" id="favDish" list="datalist" required/>
+            <datalist id="datalist">
+              <option value="Biryani">Biryani</option>
+              <option value="Pasta">Pasta</option>
+              <option value="Roti">Roti</option>
+              <option value="Other">Other</option>
+            </datalist>
+          </p>
+          <p>Please tell me your uni:</p>
+          <p>
+            <input type="radio" name="university" id="fast" value="Fast" required>
+            <label for="fast">Fast</label>
+          </p>
+          <p>
+            <input type="radio" name="university" id="nust" value="NUST" required>
+            <label for="nust">NUST</label>
+          </p>
+          <p>
+            <input type="radio" name="university" id="lums" value="lums" required>
+            <label for="lums">lums</label>
+          </p>
+          <p>Please tell me your pet</p>
+          <p>
+            <input type="checkbox" name="pet" id="dog" value="dog" required>
+            <label for="dog">Dog</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pet" id="cat" value="cat" required>
+            <label for="cat">cat</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pet" id="fish" value="fish" required>
+            <label for="fish">fish</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Your Advice</legend>
+          <label for="message">Please enter your message</label>
+          <textarea name="message" id="message" placeholder="Enter your message here"></textarea>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+      </article>
+    </main>
+
+    <hr />
+
+    <footer>
+      <p>&lt;&lt;&lt;&copy;<a href="about.html">Umer Tariq</a> &gt;&gt;&gt;</p>
+      <p><a href="#">Back to the top</a></p>
+    </footer>
+  </body>
+</html>

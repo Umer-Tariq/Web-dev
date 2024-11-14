@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-image: url("img/bubbles.png"), linear-gradient(to right, #d9e2e7, rgb(62, 156, 179));
+    background-repeat: repeat-y;
+    background-position: right;
+    background-size: 20%, 100%;
+
+}
+ 
+.outer-container {
+    background-image: url("img/map-2176x1451.png");
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: hsla(0, 0%, 0%, 0.40);
+}
+
+.container figure figcaption {
+    position: absolute;
+    left: -10000px;
+}
+
+.container figure {
+    width: 40%
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    max-width: 250px;
+
+} 
+
+/* .container a {
+    transition: transform 0.3s ease; /* Smooth transition on scaling 
+}
+ */
+.container a:hover img {
+    transform: scale(1.1); /* Hover effect to slightly enlarge the image */
+    transition: transform 0.3s ease;
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 500%;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

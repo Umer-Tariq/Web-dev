@@ -1,0 +1,9 @@
+{% extends "layout.html" %} 
+{% block heading %} 
+    Welcome 
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome Page</h1>
+    <p>Check out my <a href="{% url 'posts:homepage' %}">Home</a> page.</p>
+{% endblock %}
