@@ -16,7 +16,7 @@ body {
     background-image: url("img/bubbles.png"), linear-gradient(to right, #d9e2e7, rgb(62, 156, 179));
     background-repeat: repeat-y;
     background-position: right;
-    background-size: 20%, 100%;
+    background-size: 20%, 10%;
 
 }
  
