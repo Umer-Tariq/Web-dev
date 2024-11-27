@@ -7,7 +7,7 @@
 }
 
 .body {
-    min-width: 100vw;
+    min-width: 100vh;
 }
 .navbar {
     display: flex;
