@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="{{url_for('views.update', pid = user.uid)}}" method="post">
+    <input type="text" id="name" name = "name" placeholder="{{user.name}}">
+    <input type="number" id="age" name = "age" placeholder="{{user.age}}">
+    <button type="button" onclick = "updateUser({{user.uid}})">Update</button>
+</form>
+
+<script>
+    async function updateUser(uid)
+    {
+        const url = `/update/${uid}`;
+        const data = {
+            name : document.getElementById("name").value,
+            age : document.getElementById("age").value
+        };
+
+        const options = {
+            method : 'PUT',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        }
+
+        const response = await fetch(url, options)
+        if (response.ok) {
+            window.location.href = "/";
+        }
+
+    }
+
+</script>
+{% endblock  %}
